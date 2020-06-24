@@ -1,11 +1,12 @@
 body {
-  background-image: linear-gradient(#363636, #a33636);
-  padding: 50px;
   font: 14px "Century Gothic", Helvetica;
 }
 
-a {
-  color: #fd5e53;
+.login.ejs{
+  background-image: linear-gradient(#0c1247, #dd3e3e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 a i {

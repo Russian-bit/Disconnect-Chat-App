@@ -2,11 +2,20 @@ body {
   font: 14px "Century Gothic", Helvetica;
 }
 
-.login.ejs{
+.login.ejs {
   background-image: linear-gradient(#0c1247, #dd3e3e);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+
+.rectangle {
+  height: 500px;
+  background-color: #555;
+  margin: auto;
+  width: 75%;
+  padding: 100px;
+  
 }
 
 a i {

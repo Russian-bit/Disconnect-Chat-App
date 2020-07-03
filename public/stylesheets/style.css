@@ -2,29 +2,47 @@ body {
   font: 14px "Century Gothic", Helvetica;
 }
 
-.login.ejs {
+.login {
   background-image: linear-gradient(#0c1247, #dd3e3e);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
 
 .rectangle {
+  border-radius: 5px;
   height: 500px;
-  background-color: #555;
-  margin: auto;
-  width: 75%;
-  padding: 100px;
-  
+  background-color: #17192e;
+  padding: 30px 50px;
+  width: 500px;
+  margin: 50px;
 }
 
-a i {
-  margin-right: 0.4rem;
+@media (max-width: 500px) {
+  .rectangle {
+    margin: 0;
+  }
 }
-.error404{
+
+.loginBar {
+  padding: 100px 0px;
+
+}
+
+/*
+.loginText {
+  font: 14px "Century Gothic";
+  color: white;
   text-align: center;
 }
-.error404 h1{
+*/
+
+a i{
+  margin-right: 0.4rem;
+}
+.error404 {
+  text-align: center;
+}
+.error404 h1 {
   width: 100%;
   font-size: 30rem;
   font-weight: bold;

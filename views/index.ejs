@@ -1,16 +1,20 @@
-<%- include('partials/header'); %> 
-<div id="index">
+<%- include('partials/header'); %>
+<div id="main" class="login h-100">
+    <div class="d-flex align-items-center justify-content-center h-100 text-light">
+         <div class="rectangle">
+            <h3 class="text-center">Welcome to my Chat App!</h3>
+            <div class="loginBar h-100">
+                <div class="emailInput text-light align-items-left">
+                  <form action="/login" method="post">
+                    <h5>Email</h5>
+                        <input type="email" name="email">
+                    <h5>Password</h5>
+                        <input type="password" name="password">
+                  <button type="submit">Submit</button>
+                  </form>
+                </div>
+            </div>
+         </div>
+    </div>
 </div>
-<div id="main">
-  <div class="container-fluid">
-    <div class="row">
-      <div id="sidebar" class="col-md-3">
-        <h2>Sidebar</h2>
-      </div>  
-      <main role="main" class="col-md-9">
-        <h1>Main</h1>
-      </main>
-    </div> <!-- end .row --> 
-  </div><!-- end .container-fluid -->
-</div><!-- end #main -->
 <%- include('partials/footer'); %>

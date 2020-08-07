@@ -8,6 +8,12 @@ body {
   background-size: cover;
 }
 
+.register {
+  background-image: linear-gradient(#0c1247, #dd3e3e);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .rectangle {
   border-radius: 5px;
   height: 500px;

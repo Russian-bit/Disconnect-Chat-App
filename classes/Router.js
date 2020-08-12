@@ -38,11 +38,16 @@ class Router{
      */
     addBaseRoutes() {
         AraDTApp.get('/', this.index);
-        AraDTApp.get('/register', this.signup);
+        AraDTApp.get('/register', this.signup)
+        AraDTApp.get('/profile', this.profile);
     }
 
     signup(request, response){
         response.render('register');
+    }
+
+    profile(request, response){ 
+        response.render('profile');
     }
 
 

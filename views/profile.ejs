@@ -2,13 +2,15 @@
 <div id="main" class="profile">
     <nav class="navbar navbar-light bg-dark">
         <a class="navbar-brand" href="#">
-          <img src="/images/TempLogo.jpg" width="30" height="30">
+          <img src="/images/logo.png" width="30" height="30">
         </a>
       </nav>
 
-
-
-
+      <% if (locals.errors && locals.errors.profile) { %>
+        <% locals.errors.profile.forEach(function(error) { %>
+          <p class="alert alert-primary" role="alert"><%= error %></p>
+        <% }) %>
+      <% } %>
 
 
 <%- include('partials/footer'); %>

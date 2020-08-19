@@ -1,11 +1,37 @@
 <%- include('partials/header'); %>
-<div id="main" class="profile">
-    <nav class="navbar navbar-light bg-dark">
+
+
+<div id="main" class="profile d-flex flex-column">
+    <nav class="navbar navbar-light bg-dark py-4">
         <a class="navbar-brand" href="#">
           <img src="/images/logo.png" width="30" height="30">
         </a>
       </nav>
 
+    
+      <div class="d-flex flex-grow-1 flex-column align-items-center justify-content-center text-light m-3">
+        <h3 class="w-100">My Profile</h3>
+         <div class="profileBox w-100 h-100">
+                <div class="emailInput text-light align-items-left">
+                    <div class="userInput text-light align-items-left">
+                        <h5>Username</h5>
+                        <input type="username" name="user">
+                        <h5>Email</h5>
+                        <input type="email" name="email">
+                    </div>
+                    
+                    <div>
+                      <h5>Password</h5>
+                      <input type="password" name="pass">
+                      <h5>Password Confirm</h5>
+                      <input type="password" name="passConfirm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+                    
       <% if (locals.errors && locals.errors.profile) { %>
         <% locals.errors.profile.forEach(function(error) { %>
           <p class="alert alert-primary" role="alert"><%= error %></p>

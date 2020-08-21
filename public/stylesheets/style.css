@@ -1,14 +1,5 @@
 body {
   font: 14px 'Pixel Digivolve';
-}
-
-.login {
-  background-image: linear-gradient(#0c1247, #dd3e3e);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.register {
   background-image: linear-gradient(#0c1247, #dd3e3e);
   background-repeat: no-repeat;
   background-size: cover;

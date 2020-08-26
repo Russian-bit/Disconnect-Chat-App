@@ -10,8 +10,8 @@ router.get('/register', function(req, res, next) {
   res.render('register', { title: 'Express' });
 });
 
-router.get('/profile', function(req, res, next) {
-  res.render('profile', { title: 'Express' });
+router.get('/account', function(req, res, next) {
+  res.render('account', { title: 'Express' });
 });
 
 module.exports = router;

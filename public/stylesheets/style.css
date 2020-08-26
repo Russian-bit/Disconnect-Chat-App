@@ -44,7 +44,7 @@ body {
 */
 
 .profile {
-  background-color:lightslategray;
+  background-color:rgb(78, 78, 78);
   height: 100%;
 }
 
@@ -52,6 +52,18 @@ body {
   background-color: #121B21;
   padding: 30px 50px;
 }  
+
+#output {
+  vertical-align: middle;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#avatar {
+  display: none;
+}
 
 a i{
   margin-right: 0.4rem;

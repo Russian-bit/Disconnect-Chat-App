@@ -8,28 +8,47 @@
         </a>
       </nav>
 
-    
+      
       <div class="d-flex flex-grow-1 flex-column align-items-center justify-content-center text-light m-3">
         <h3 class="w-100">My Profile</h3>
          <div class="profileBox w-100 h-100">
-                <div class="emailInput text-light align-items-left">
-                    <div class="userInput text-light align-items-left">
+
+          <form action="/account" method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="emailInput text-light align-items-left row">
+                    <div class="userInput text-light align-items-left col-md-4">
                         <h5><br>Username</h5>
-                        <input type="username" name="user">
+                        <input type="text" name="displayName" value="<%= locals.user.displayName %>">
                         <h5><br>Email</h5>
-                        <input type="email" name="email">
+                        <input type="email" name="email" value="<%= locals.user.email %>">
                         <h5><br>Email Confirm</h5>
                         <input type="email" name="emailConfirm">
+                        <button type="submit">Update</button>
                     </div>
-                    
-                    <div>
+          </form>
+
+          
+          <form action="/password" method="post">
+                    <div class="col-md-4">
                       <h5><br>Current Password</h5>
                       <input type="password" name="passCurrent">
                       <h5><br>Password</h5>
                       <input type="password" name="pass">
                       <h5><br>Password Confirm</h5>
                       <input type="password" name="passConfirm">
+                      <button type="submit">Update Password</button>
                     </div>
+          </form>
+
+                    <div class="col-md-1">
+
+                      <input type="file" name="avatar" id="avatar" onChange="loadFile(event)">
+                      <label for="avatar" id="avatarLabel">Update Profile</label>
+                      <img class="avatar" src="<%= user.photoURL %>" alt="Avatar" id="output">
+
+                    </div>
+
+
                   </div>
                 </div>
               </div>

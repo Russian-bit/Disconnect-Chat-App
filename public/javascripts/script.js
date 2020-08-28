@@ -1,4 +1,5 @@
-var loadFile = function(event) {
-    var image = document.getElementById('output');
-    image.src = URL.createObjectURL(event.target.files[0])
-};
+
+function loadFile(event) {
+    document.querySelector('#avatar').style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
+  }
+  

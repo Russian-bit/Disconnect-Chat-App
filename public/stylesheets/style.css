@@ -1,5 +1,6 @@
 body {
-  font: 14px 'Pixel Digivolve';
+  font-family: 'Pixel Digivolve', sans-serif;
+  font-size: 14px;
   background-image: linear-gradient(#0c1247, #dd3e3e);
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,24 +46,33 @@ body {
 
 .profile {
   background-color:rgb(78, 78, 78);
-  height: 100%;
 }
 
 .profileBox {
   background-color: #121B21;
   padding: 30px 50px;
-}  
-
-#output {
-  vertical-align: middle;
-  max-width: 300px;
-  max-height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 #avatar {
-  display: none;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("/images/defaultAvatar.png");
+}
+
+@media (min-width: 768px) {
+  #avatar-container {
+    margin-left: 40px;
+  }
+}
+
+
+.settingsbox {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a i{

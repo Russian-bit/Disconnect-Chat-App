@@ -6,6 +6,9 @@ body {
   background-size: cover;
 }
 
+
+/*index*/
+
 .rectangle {
   border-radius: 5px;
   height: 500px;
@@ -21,7 +24,7 @@ body {
   }
 }
 
-.loginBar {
+.loginArea {
   padding: 100px 0px;
 
 }
@@ -44,8 +47,10 @@ body {
 }
 */
 
+/*account*/
+
 .profile {
-  background-color:rgb(78, 78, 78);
+  background-color:#353A3D;
 }
 
 .profileBox {
@@ -58,7 +63,7 @@ body {
   width: 200px;
   border-radius: 50%;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-image: url("/images/defaultAvatar.png");
 }
 

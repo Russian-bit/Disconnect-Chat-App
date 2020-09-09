@@ -14,4 +14,8 @@ router.get('/account', function(req, res, next) {
   res.render('account', { title: 'Express' });
 });
 
+router.get('/message', function(req, res, next) {
+  res.render('message', { title: 'Express' });
+});
+
 module.exports = router;

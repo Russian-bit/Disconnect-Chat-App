@@ -59,6 +59,18 @@ body {
   width: 22%
 }
 
+/*channels*/
+
+.createChannel {
+  color: red;
+}
+
+.channelBar {
+  background-color: #121B21;
+  padding: 20px 10px;
+  width: 45%;
+}
+
 
 /*account*/
 

@@ -26,6 +26,8 @@ body {
   .rectangle {
     margin: 0;
   }
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
 .loginArea {
@@ -53,22 +55,40 @@ body {
 
 /*chats*/
 
-.chatBar {
+.sideBar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   background-color: #121B21;
-  padding: 20px 10px;
-  width: 22%
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
 }
 
 /*channels*/
 
 .createChannel {
-  color: red;
+  color: rgb(255, 100, 100);
 }
 
 .channelBar {
   background-color: #121B21;
-  padding: 20px 10px;
-  width: 45%;
+  padding: 30px 50px;
+  width: 500px;
 }
 
 

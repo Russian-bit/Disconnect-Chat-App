@@ -13,8 +13,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
       </a>
 	</nav>
 </div>
-	
-<div class="channelBar flex-grow-1">
+	<div class="channelBar">
 
 
 	<div id="owned-channels" class="user-channels text-light">
@@ -43,7 +42,9 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 		<% }) %>
 		</ul>
 	<% }  %>
+
 	</div>
+	
 
 	<div class="createChannel mb-3">
 		<h6>Create Channel</h6>
@@ -53,6 +54,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 			<button id="update" type="submit">Create</button>
 		</form>
 	</div>
+
 
 </div>
 

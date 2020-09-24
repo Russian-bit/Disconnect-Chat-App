@@ -4,36 +4,29 @@ var channels = locals.channels
 var owned = ("owned" in  channels) ? channels.owned : false
 var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 %>
-
-<!--
+  
 <div id="top" class="profile d-flex flex-column flex-grow-1">
-    <nav class="navbar navbar-light bg-dark py-4">
-      <a class="navbar-brand" href="#">
-        <img src="/images/logo.png" height="60">
-      </a>
+	<nav class="navbar py-4">
+	  <a class="navbar-brand" href="#">
+		<img src="/images/logo.png" height="60">
+	  </a>
+	  <a href="/account">
+		<button class="btn btn-warning" type="submit">Profile</button>
+	  </a>
+	  <a href="/">
+		<button class="btn btn-primary" type="submit">Logout</button>
+	  </a>
 	</nav>
-</div>
-	<div class="channelBar">
-	-->
-
-
-
-
-	<div id="top" class="profile d-flex flex-column flex-grow-1">
-		<nav class="navbar navbar-light bg-dark py-4">
-		  <a class="navbar-brand" href="#">
-			<img src="/images/logo.png" height="60">
-		  </a>
-		</nav>
+	
 	  
 		<div class="d-flex flex-grow-1 flex-column text-light">
-		  <h3 class="settingsbox mx-3 mt-3">My Channels</h3>
+		  <h3 class="settingsbox mx-3 mt-3">Channels</h3>
 		  <div class="profileBox flex-grow-1 mx-3 mb-3">
 
 			  <div class="settingsbox d-flex flex-column-reverse flex-md-row align-items-left justify-content-center">
 				<div class="w-100">
 					<div id="owned-channels" class="user-channels text-light">
-						<h4>Your Channels</h4>
+						<h4>My Channels</h4>
 					<% if (owned) { %>
 						<ul>
 						<% owned.forEach(function(channel) { %>
@@ -62,18 +55,30 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 					</div>
 					
 				
-					<% var users = locals.channels.users %>
-					<form id="channel-create-form" action="/channels/add" method="post" enctype="multipart/form-data">
-						<input type="text" class="form-control" name="name" placeholder="Display Name" value="">
-						<input type="file" class="custom-file-input" name="avatar" id="avatar-upload">
-						<% if (users) { %>
-							<% users.forEach(function(user) { %>
-								<input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
-								<p><%= user.name %></p>
-							<% }) %>
-						<% } %>
-						<button id="update" type="submit">Create</button>
-					
+					<div class="createForm d-flex flex-md-row">
+						<% var users = locals.channels.users %>
+						<form id="channel-create-form" action="/channels/add" method="post" enctype="multipart/form-data">
+							<input type="text" class="form-control" name="name" placeholder="New Channel..." value="">
+							<div class="avatarUpload d-flex flex-md-row">
+								<input type="file" class="custom-file-input" name="avatar" id="avatar-upload"> 
+								<h7>Channel Image</h7>
+								<label class="btn btn-secondary rounded-pill mb-0" for="avatar-upload" id="avatarChannels">
+									<span class="fas fa-plus"></span>
+								</label>
+							</div>
+
+							<div class="users mt-4">
+								<h5>Add Users...</h5>
+								<% if (users) { %>
+									<% users.forEach(function(user) { %>
+										<input class="user-check-input" id="user<%= user.id %>" type="checkbox" name="users" value="<%= user.id %>">
+										<p><%= user.name %></p>
+									<% }) %>
+								<% } %>
+							</div>
+							<button id="update" class="btn btn-primary mt-3" type="submit">Create</button>
+						</form>
+					</div>
 				
 				
 				</div>
@@ -85,3 +90,22 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 
 
 <%- include('partials/footer'); %>
+<% //ALL LOCALS DATA %>
+<% if (locals.errors) { %>
+<% var errorKeys = JSON.stringify(Object.keys(locals.errors), null, 2); %>
+<pre>Error keys: <%= errorKeys %></pre>
+<% var errorData = JSON.stringify(locals.errors, null, 2); %>
+<pre>Errors: <%= errorData %></pre>
+<% } %>
+<% if (locals.user) { %>
+<% var userKeys = JSON.stringify(Object.keys(locals.user), null, 2); %>
+<pre>User keys: <%= userKeys %></pre>
+<% var userData = JSON.stringify(locals.user, null, 2); %>
+<pre>User: <%= userData %></pre>
+<% } %>
+<% if (locals.channels) { %>
+<% var channelKeys = JSON.stringify(Object.keys(locals.channels), null, 2); %>
+<pre>Channel keys: <%= channelKeys %></pre>
+<% var channels = JSON.stringify(locals.channels, null, 2); %>
+<pre>Channels: <%= channels %></pre>
+<% } %>

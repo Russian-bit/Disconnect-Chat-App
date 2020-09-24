@@ -6,12 +6,13 @@ body {
   background-size: cover;
 }
 
+.navbar{
+  background-color: #121B21;
+}
+
 
 /*index*/
 
-.top{
-  background-color: #121B21;
-}
 
 .rectangle {
   border-radius: 5px;
@@ -81,16 +82,11 @@ body {
 
 /*channels*/
 
-.createChannel {
-  color: rgb(255, 100, 100);
+.createForm {
+  background-color: #263a47;
+  padding: 20px 50px;
+  border-radius: 11px;
 }
-
-.channelBar {
-  background-color: #121B21;
-  padding: 30px 50px;
-  width: 500px;
-}
-
 
 /*account*/
 

@@ -66,6 +66,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 									<span class="fas fa-plus"></span>
 								</label>
 							</div>
+							<button class="btn btn-primary" type="submit">Create</button>
 
 							<div class="users mt-4">
 								<h5>Add Users...</h5>
@@ -75,8 +76,7 @@ var subscribed = ("subscribed" in  channels) ? channels.subscribed : false
 										<p><%= user.name %></p>
 									<% }) %>
 								<% } %>
-							</div>
-							<button id="update" class="btn btn-primary mt-3" type="submit">Create</button>
+							</div> 
 						</form>
 					</div>
 				

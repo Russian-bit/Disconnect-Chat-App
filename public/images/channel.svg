@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <rect
+       style="fill:#33337c;fill-opacity:1;stroke-width:0.0798583"
+       id="rect833"
+       width="26.458334"
+       height="26.458334"
+       x="-4.8455809e-07"
+       y="-4.8455809e-07"
+       ry="0" />
+    <circle
+       style="fill:#ffffff;stroke-width:0.0332942"
+       id="path835-7-3"
+       cx="20.94684"
+       cy="10.375903"
+       r="1.8853028" />
+    <path
+       id="path837-5-5"
+       style="fill:#ffffff;stroke-width:0.0272515"
+       d="m 20.939256,12.929514 a 3.7646591,2.646718 0 0 0 -3.755442,2.567936 h 7.526051 a 3.7646591,2.646718 0 0 0 -3.763026,-2.567936 3.7646591,2.646718 0 0 0 -0.0075,0 z" />
+    <circle
+       style="fill:#ffffff;stroke-width:0.0539778"
+       id="path835"
+       cx="13.24146"
+       cy="11.566004"
+       r="3.0565298" />
+    <path
+       id="path837"
+       style="fill:#ffffff;stroke-width:0.0441812"
+       d="M 13.229167,15.706024 A 6.103419,4.2909673 0 0 0 7.1406891,19.869265 H 19.342231 a 6.103419,4.2909673 0 0 0 -6.10077,-4.163241 6.103419,4.2909673 0 0 0 -0.0123,0 z" />
+    <circle
+       style="fill:#ffffff;stroke-width:0.0332941"
+       id="path835-7-3-6"
+       cx="-5.5114932"
+       cy="10.375903"
+       r="1.8853028"
+       transform="scale(-1,1)" />
+    <path
+       id="path837-5-5-2"
+       style="fill:#ffffff;stroke-width:0.0272515"
+       d="m 5.5190777,12.929514 a 3.764659,2.646718 0 0 1 3.7554419,2.567936 h -7.526051 a 3.764659,2.646718 0 0 1 3.7630255,-2.567936 3.764659,2.646718 0 0 1 0.00755,0 z" />
+  </g>
+</svg>

@@ -10,18 +10,18 @@ function hideTyping() {
 
 function alertChannel(alertTxt){
 	var alert = `<div class="alert alert-primary" role="alert">${alertTxt}</div>`;
-	$('#chat').append(alert);
+	$('#chat').prepend(alert);
 }
 
 function addMsg(msgData){
 	var msg = `
-		<div class="message ${msgData.direction}" data-time="${msgData.time}">
+		<div class="message ${msgData.direction} my-3" data-time="${msgData.time}">
 			<div class="user">
-				<img src="${msgData.user.image}" alt="Image">
-				<p>${msgData.user.name}</p>
+				<img src="${msgData.user.image}" class="rounded" width="50" height="50">
+        <strong>${msgData.user.name}:</strong>
+        ${msgData.msg}
+        <small class="text-muted time">Just now</small>
 			</div>
-			<p>${msgData.msg}</p>
-			<small class="text-muted time">Just now</small>
 		</div>
 	`;
 	$('#chat').append(msg);

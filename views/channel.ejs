@@ -1,60 +1,59 @@
-<%- include('partials/header'); %> 
-<% 
+<%- include('partials/header'); %>
+<%- include('partials/nav'); %>
+<%
 var showChannel = locals.channel.channel
 var messages = locals.messages
 var user = locals.user
 var participants = (locals.channel.inUsers) ? locals.channel.inUsers : false
-%> 
-			<div id="main">
-				<div class="container-fluid">
-					<div class="row">
-						<div id="sidebar" class="col-md-5 col-sm-6 d-none d-sm-block">
-							<% if (participants) { %>
-							<div id="participants">
-								<h4>Channel Members</h4>
-								<ul class="list-group">
-								<% participants.forEach(function(user) { %>
-									<li id="user<%= user.id %>">
-										<div class="avatar">
-											<img src="<%= user.image %>" alt="<%= user.name %>">
-										</div>
-										<p><%= user.name %> <small class="text-muted d-none"> typing... </small></p>
-									</li>
-								<% }) %>
-								</ul>
-							</div>
-							<% } else { %>
-								<p><div class="alert alert-primary" role="alert">Make some friends on here and add them to your channels!</div></p>
-							<% }  %>
-						</div>  
-						<main role="main" class="col-md-7 col-sm-6">
-							<h1><%= showChannel.name %></h1>
-							<div id="chat">
-							<% if (messages) { %>
-								<% messages.forEach(function(message) { %>
-								<div class="message <%=message.direction%>" data-time="<%=message.time%>">
-									<div class="user">
-										<img src="<%=message.user.image%>" alt="Image">
-										<p><%=message.user.name%></p>
-									</div>
-									<p><%=message.msg%></p>
-									<small class="text-muted time"></small>
-								</div>
-								<% }) %>
-							<% }  %>
-							</div>           
-							<div id="message">
-								<form id="message-form">
-									<textarea id="message-box" placeholder="Type your message here"></textarea>
-									<input 
-										data-user='{"uid":"<%= locals.user.uid %>","name":"<%= locals.user.displayName %>","image":"<%= locals.user.photoURL %>"}'
-										data-channel='{"uid":"<%= showChannel.id %>","name":"<%= showChannel.name %>"}'
-										type="hidden" id="chat-info">
-									<button id="send-message" type="submit">Send</button>
-								</form>
-							</div>
-						</main>
-					</div> <!-- end .row --> 
-				</div><!-- end .container-fluid -->
-			</div><!-- end #main -->
+%>
+<div id="main" class="h-100 p-3">
+  <div class="profileBox text-light h-100">
+    <div class="d-flex mx-2 h-100">
+      <main role="main" class="col-9">
+        <h1><%= showChannel.name %></h1>
+        <div id="chat" class="border p-3">
+        <% if (messages) { %>
+          <% messages.forEach(function(message) { %>
+            <div class="message <%=message.direction%> mb-3" data-time="<%=message.time%>">
+            <div class="user">
+              <img class="rounded" src="<%= message.user.image %>" height="50" width="50">
+              <strong><%=message.user.name%>:</strong>
+              <%=message.msg%>
+              <small class="text-muted time"></small>
+            </div>
+          </div>
+          <% }) %>
+        <% }  %>
+        <div id="message">
+          <form id="message-form" class="d-flex">
+            <textarea class="w-100 mr-3 rounded border" id="message-box" placeholder="Type your message here"></textarea>
+            <button id="send-message" class="btn btn-primary" type="submit">Send</button>
+            <input
+              data-user='{"uid":"<%= locals.user.uid %>","name":"<%= locals.user.displayName %>","image":"<%= locals.user.photoURL %>"}'
+              data-channel='{"uid":"<%= showChannel.id %>","name":"<%= showChannel.name %>"}'
+              type="hidden" id="chat-info">
+          </form>
+        </div>
+        </div>
+      </main>
+      <div id="sidebar" class="col-3 d-none d-sm-block">
+        <% if (participants) { %>
+        <div id="participants">
+          <h4>Channel Members</h4>
+          <ul class="list-group">
+          <% participants.forEach(function(user) { %>
+            <li id="user<%= user.id %>">
+              <img class="rounded" src="<%= user.image %>" height="50" width="50">
+              <%= user.name %> <small class="text-muted d-none"> typing... </small>
+            </li>
+          <% }) %>
+          </ul>
+        </div>
+        <% } else { %>
+          <p><div class="alert alert-primary" role="alert">Make some friends on here and add them to your channels!</div></p>
+        <% }  %>
+      </div>
+    </div> <!-- end .row -->
+  </div><!-- end .container-fluid -->
+</div><!-- end #main -->
 <%- include('partials/footer'); %>

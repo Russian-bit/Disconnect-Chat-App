@@ -16,7 +16,6 @@ body {
 
 .rectangle {
   border-radius: 5px;
-  height: 500px;
   background-color: #121B21;
   padding: 30px 50px;
   width: 500px;
@@ -32,7 +31,7 @@ body {
 }
 
 .loginArea {
-  padding: 100px 0px;
+  padding: 20px 0px;
 }
 
 /*
@@ -83,7 +82,7 @@ body {
 /*channels*/
 
 .createForm {
-  background-color: #263a47;
+  background-color: #222C33;
   padding: 20px 50px;
   border-radius: 11px;
 }
@@ -132,4 +131,24 @@ a i{
   font-size: 30rem;
   font-weight: bold;
   text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.66);
+}
+
+.user-scroll {
+  overflow-x: auto;
+  max-height: 100px;
+  background-color: #364047;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+.channel-scroll {
+  overflow-x: auto;
+  max-height: 200px;
+  background-color: #222C33;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+#main {
+  color: #eee;
 }

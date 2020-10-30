@@ -2,41 +2,34 @@
 
 
 <div id="mainLogin" class="login h-100">
-    <% if (locals.errors && locals.errors.login) { %>
-        <% locals.errors.login.forEach(function(error) { %>
-            <p class="alert alert-primary" role="alert"><%= error %></p>
-        <% }) %>
-    <% } %>
+  <% if (locals.errors && locals.errors.login) { %>
+    <% locals.errors.login.forEach(function(error) { %>
+      <p class="alert alert-primary" role="alert"><%= error %></p>
+    <% }) %>
+  <% } %>
 
-
-    <div class="d-flex align-items-center justify-content-center h-100 text-light">
-         <div class="rectangle">
-            <h3 class="text-center">Welcome to Disconnect!</h3>
-            <div class="loginArea justify-content-center h-100">
-                <div class="loginlInput text-light d-flex justify-content-center ">
-                    
-                  <form action="/login" method="post">
-                    <h5>Email</h5>
-                        <input class="form-control mb-2" type="email" name="email">
-                    <h5>Password</h5>
-                        <input class="form-control mb-2" type="password" name="password">
-                        <div>
-                            <button class="btn btn-primary mb-3" type="login">Login</button>
-                        </div>
-                    <div class="mt-5 align-items-center align-items-center">
-                        <a href="/register" class="text-info">Register Here</a>
-                    </div>
-                  </form>
-
-
-
-                </div>
+  <div class="d-flex align-items-center justify-content-center h-100 text-light">
+    <div class="rectangle">
+      <h3 class="text-center">Welcome to Disconnect!</h3>
+      <div class="loginArea justify-content-center h-100">
+        <div class="loginlInput text-light d-flex justify-content-center ">
+          <form action="/login" method="post">
+            <h5>Email</h5>
+            <input class="form-control mb-2" type="email" name="email">
+            <h5>Password</h5>
+            <input class="form-control mb-2" type="password" name="password">
+            <div>
+              <button class="btn btn-primary mb-3" type="login">Login</button>
             </div>
-         </div>
+            <div class="mt-2 align-items-center align-items-center font-weight-bold">
+              <a href="/register" class="text-info">Don't have an account? Register Here!</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    
-
+  </div>
 </div>
-      
+
 
 <%- include('partials/footer'); %>
